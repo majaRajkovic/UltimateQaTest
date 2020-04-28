@@ -21,7 +21,10 @@
   },
   "dependencies": {
     "@wdio/cli": "^6.1.0",
+    "allure-commandline": "^2.13.0",
+    "faker": "^4.1.0",
     "jasmine": "^3.5.0",
+    "jasmine-allure-reporter": "^1.0.2",
     "selenium-standalone": "^6.17.0",
     "wdio": "^4.0.0"
   }
