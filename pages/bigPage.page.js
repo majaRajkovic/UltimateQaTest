@@ -1,3 +1,5 @@
+const Data = require("../data/data");
+
 class BigPage {
 
     get logo_Icon() { return $("//img[@id='logo']") }
@@ -61,26 +63,31 @@ class BigPage {
 
     }
 
-    enterTxtToMsgBox() {
+    enterTxtToMsgBox(txt) {
 
         this.click_on_msg_box.waitForDisplayed();
 
         this.click_on_msg_box.click();
 
-        this.click_on_msg_box.setValue(" Maja: 'Ne uci' ");
+        this.click_on_msg_box.setValue(txt);
+
+        var txtFile = this.click_on_msg_box.getValue();
+
+        var originalFile = Data.txt;
+
+        expect(txtFile).toMatch(originalFile);
 
         return this;
 
-
     }
 
-    enterResult() {
+    enterResult(result) {
 
         this.click_result_box.waitForDisplayed();
 
         this.click_result_box.click();
 
-        this.click_result_box.setValue('13');
+        this.click_result_box.setValue(result);
 
         return this;
 

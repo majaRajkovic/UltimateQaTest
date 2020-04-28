@@ -9,6 +9,10 @@ class Data {
 
     name = faker.name.firstName();
 
+    txt = faker.random.words(); 
+
+    result = "13";
+
 
 
 

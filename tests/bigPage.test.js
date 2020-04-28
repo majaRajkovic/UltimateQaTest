@@ -17,7 +17,7 @@ describe('Test automation exercise page', function () {
         BigPage.clickOnBigPageWithElements().
             enterName(Data.name).
             enterEmailAddress(Data.email).
-            enterTxtToMsgBox(faker.random.words);
+            enterTxtToMsgBox(Data.txt);
 
     })
 
@@ -25,7 +25,7 @@ describe('Test automation exercise page', function () {
 
         MainComponent.clickOnAutomationExercises();
 
-        BigPage.clickOnBigPageWithElements().enterResult();
+        BigPage.clickOnBigPageWithElements().enterResult(Data.result);
         
     });
 
