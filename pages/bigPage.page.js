@@ -59,6 +59,10 @@ class BigPage {
 
         this.click_on_name_button.setValue(name);
 
+        var newName = this.click_on_name_button.getValue();
+
+        expect(name).toMatch(newName);
+
         return this;
 
     }

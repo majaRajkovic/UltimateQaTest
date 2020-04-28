@@ -3,7 +3,7 @@ const faker = require('faker');
 class Data {
 
     // Sets locale to different languages 
-    faker = faker.locale = "de_AT";
+    faker = faker.locale = "ja";
 
     email = faker.internet.email();
 
