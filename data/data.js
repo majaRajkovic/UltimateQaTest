@@ -13,6 +13,10 @@ class Data {
 
     result = "13";
 
+    search = "Websites to Practice Test Automation";
+
+
+
 
 
 

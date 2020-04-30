@@ -12,14 +12,21 @@ describe('Test automation exercise page', function () {
 
         MainPage.openMainPage();
 
-        MainComponent.clickOnAutomationExercises();
+        MainComponent.clickOnAutomationExercises().
+        clickOnSeleniumResources().
+        enterTextInSearch(Data.search).
+        clickOnSearchButton();
+       
+    
 
-        BigPage.clickOnBigPageWithElements().
+       BigPage.clickOnBigPageWithElements().
             enterName(Data.name).
             enterEmailAddress(Data.email).
             enterTxtToMsgBox(Data.txt);
+            
+            
 
-    })
+    });
 
     it('Drugi test', function(){
 

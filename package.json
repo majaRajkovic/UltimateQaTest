@@ -16,13 +16,13 @@
     "@wdio/selenium-standalone-service": "^6.0.16",
     "@wdio/spec-reporter": "^6.0.16",
     "@wdio/sync": "^6.1.0",
+    "faker": "^4.1.0",
     "local-runner": "^0.1.1-alpha",
     "webdriverio": "^6.1.0"
   },
   "dependencies": {
     "@wdio/cli": "^6.1.0",
     "allure-commandline": "^2.13.0",
-    "faker": "^4.1.0",
     "jasmine": "^3.5.0",
     "jasmine-allure-reporter": "^1.0.2",
     "selenium-standalone": "^6.17.0",

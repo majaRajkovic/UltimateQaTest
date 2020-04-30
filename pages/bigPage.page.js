@@ -4,7 +4,7 @@ class BigPage {
 
     get logo_Icon() { return $("//img[@id='logo']") }
 
-    get click_on_big_page() { return $("//a[text()='Big page with many elements']") }
+    get click_on_big_page() { return $("//a[contains(text(), 'Big page with many elements')]") }
 
     get click_on_big_page_verification() { return $("//span[@id='Skills_Improved']") }
 
