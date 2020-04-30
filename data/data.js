@@ -17,6 +17,12 @@ class Data {
 
 
 
+    // Here goes random number function 
+
+    
+
+
+
 
 
 

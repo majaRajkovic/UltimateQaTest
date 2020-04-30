@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio ./wdio.conf.js"
+    "test": "./node_modules/.bin/wdio ./wdio.conf.js",
+    "action": "./node_modules/.bin/wdio ./wdio.conf.js --suite action",
+    "done": "./node_modules/.bin/wdio ./wdio.conf.js --suite done"
   },
   "author": "Maja",
   "license": "ISC",

@@ -1,12 +1,7 @@
 const Data = require("../data/data");
 
-class BigPage {
+class BigPage{
 
-    get logo_Icon() { return $("//img[@id='logo']") }
-
-    get click_on_big_page() { return $("//a[contains(text(), 'Big page with many elements')]") }
-
-    get click_on_big_page_verification() { return $("//span[@id='Skills_Improved']") }
 
     get click_on_name_button() { return $("//input[@id='et_pb_contact_name_0']") };
 
@@ -19,21 +14,8 @@ class BigPage {
     get click_on_submit() { return $("//button[contains(text(), 'Submit')][1]") }
 
 
-    /////////////////////
-
-    clickOnBigPageWithElements() {
-
-        this.click_on_big_page.waitForDisplayed();
-
-        this.click_on_big_page.click();
-
-        this.click_on_big_page_verification.waitForDisplayed();
-
-        return this;
-
-    }
-
-
+///////////////////////////////////////////////////////////////////////
+    
     enterEmailAddress(email) {
 
         this.click_on_email_button.waitForDisplayed();
@@ -112,5 +94,9 @@ class BigPage {
 
     }
 
+
+
+
 }
+
 module.exports = new BigPage();
