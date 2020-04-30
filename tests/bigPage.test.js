@@ -15,7 +15,10 @@ describe('Test automation exercise page', function () {
         MainComponent.clickOnAutomationExercises().
         clickOnSeleniumResources().
         enterTextInSearch(Data.search).
-        clickOnSearchButton();
+        clickOnSearchButton().
+        enterEmailSubscription(Data.email).
+        clickOnSubscriptionButton();
+        
        
     
 

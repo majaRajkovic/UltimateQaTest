@@ -21,6 +21,12 @@ class MainMenuComponent {
 
     get click_on_search_button_verification() {return $("//div[@id='top-posts-2']")}
 
+    get get_latest_post_subscription() {return $("//input[@id='subscribe-field-blog_subscription-2']")}
+
+    get click_on_subscription_button() {return $("//p[@id='subscribe-submit']")}
+
+    get click_on_subscription_button_verification() {return $("//div[@class='success']")}
+
     ///////////////////////////////////////////////////////////////////////////
 
 
@@ -89,6 +95,34 @@ class MainMenuComponent {
         return this;
 
     }
+
+    enterEmailSubscription(email) {
+
+        this.get_latest_post_subscription.waitForDisplayed();
+
+        this.get_latest_post_subscription.click();
+
+        this.get_latest_post_subscription.setValue(email);
+
+        var newSearch = this.get_latest_post_subscription.getValue();
+
+        expect(email).toMatch(newSearch);
+
+        return this;
+
+    }
+    clickOnSubscriptionButton() {
+
+        this.click_on_subscription_button.waitForDisplayed();
+
+        this.click_on_subscription_button.click();
+
+        this.click_on_subscription_button_verification.waitForDisplayed();
+
+        return this;
+
+    }
+    
 
 }
 
