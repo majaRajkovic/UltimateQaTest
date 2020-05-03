@@ -43,7 +43,9 @@ describe('Test automation exercise page', function () {
         MainPage.openMainPage();
         MainComponent.clickOnAutomationExercises();
         ElementInteraction.clickOnInteractionsWithElements().
-            clickOnMaleButton();
+            clickOnMaleButton().
+            clickOnCheckBoxButton().
+            clickOnCar();
 
 
 

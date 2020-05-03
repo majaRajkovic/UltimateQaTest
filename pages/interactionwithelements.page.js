@@ -2,11 +2,9 @@ const MainComponent = require("../components/main.menu.component");
 const BigPage = require("./automationPractice.page");
 const Data = require("../data/data");
 
-function getRandomNumber(n) {
-    return Math.floor(n * Math.random()) + 1;
-}
-
 class ElementInteraction {
+
+    carOrBike = Data.getRandomNumber(2);
 
     get logo_Icon() { return $("//img[@id='logo']") }
 
@@ -14,7 +12,13 @@ class ElementInteraction {
 
     get click_interactions_with_elements_verification() {return $("(//div[@class='et_pb_text_inner'])[1]")};
 
-    get click_on_male_button() {return $("(//input[@type='radio'])[" + Data.getRandomNumber(3) + "]")};
+    get click_on_radio_button() {return $("(//input[@type='radio' and @name='gender'])[" + Data.getRandomNumber(3) + "]")};
+
+    get click_on_checkbox_button() {return $("(//input[@type='checkbox' and @name='vehicle'])[" + this.carOrBike + "]")};
+
+    get choose_a_car() {return $("(//select/option)[" + Data.getRandomNumber(4) + "]")};
+
+
 
  /////////////////////
 
@@ -32,14 +36,38 @@ class ElementInteraction {
 
     clickOnMaleButton() {
 
-        this.click_on_male_button.waitForDisplayed();
+        this.click_on_radio_button.waitForDisplayed();
 
-        this.click_on_male_button.click();
+        this.click_on_radio_button.click();
 
         browser.pause(3000);
 
         return this;
 
+
+    }
+
+    clickOnCheckBoxButton() {
+
+        this.click_on_checkbox_button.waitForDisplayed();
+
+        this.click_on_checkbox_button.click();
+
+        browser.pause(3000);
+
+        return this;
+
+    }
+
+    clickOnCar() {
+
+        this.choose_a_car.waitForDisplayed();
+
+        this.choose_a_car.click();
+
+        browser.pause(2000);
+
+        return this;
 
     }
 }
