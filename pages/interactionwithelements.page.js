@@ -10,7 +10,7 @@ class ElementInteraction {
 
     get click_on_radio_button() {return $("(//input[@type='radio' and @name='gender'])[" + Base.getRandomNumber(3) + "]")};
 
-    get click_on_checkbox_button() {return $("(//input[@type='checkbox' and @name='vehicle'])[" + Base.getRandomNumber(3) + "]")};
+    get click_on_checkbox_button() {return $("(//input[@type='checkbox' and @name='vehicle'])[" + Base.getRandomNumber(2) + "]")};
 
     get choose_a_car() {return $("(//select/option)[" + Base.getRandomNumber(4) + "]")};
 
@@ -40,10 +40,10 @@ class ElementInteraction {
         this.click_on_radio_button.click();
 
         this.click_on_radio_button.isSelected();
-        
-        expect(this.click_on_radio_button).toBeChecked()
 
-        browser.pause(3000);
+        expect(this.click_on_radio_button).toBeSelected();
+        
+        browser.pause(1000);
 
         return this;
 
@@ -56,7 +56,9 @@ class ElementInteraction {
 
         this.click_on_checkbox_button.click();
 
-        browser.pause(3000);
+        expect(this.click_on_checkbox_button).toBeChecked()
+
+        browser.pause(1000);
 
         return this;
 
@@ -67,6 +69,8 @@ class ElementInteraction {
         this.choose_a_car.waitForDisplayed();
 
         this.choose_a_car.click();
+
+        this.choose_a_car.isSelected();
 
         browser.pause(2000);
 

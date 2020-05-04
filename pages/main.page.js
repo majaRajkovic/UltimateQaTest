@@ -1,4 +1,4 @@
-const MainComponent = require("../components/main.menu.component");
+const MainComponent = require("../components/mainMenu.component");
 
 
 
